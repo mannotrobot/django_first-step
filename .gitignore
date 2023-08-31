@@ -1,3 +1,4 @@
 djenv/
 *.sqlite3
 __pucahe__/
+*.pyc

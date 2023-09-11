@@ -9,11 +9,20 @@ menu = ['about site', 'add notes', 'callback', 'enter']
 
 
 
+data_db = [
+    {'id': 1, 'title': 'T-800', 'content': 'Info T-800', 'is_pub': True},
+    {'id': 2, 'title': 'T-1000', 'content': 'Info T-1000', 'is_pub': False},
+    {'id': 3, 'title': 'Bander', 'content': 'Info Bander', 'is_pub': True},
+]
+
+
+
 
 def index(request): # HttpRequest
     data = {
         'title': 'main page',
         'menu': menu,
+        'posts': data_db,
     }
     return render(request, 'robots/index.html', context=data)
 
